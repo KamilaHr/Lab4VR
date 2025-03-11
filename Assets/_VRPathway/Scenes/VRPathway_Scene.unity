@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 8900000, guid: 6faa5624b576ea94c99b1fe9c0beca1f, type: 3}
   m_Sun: {fileID: 2132949987}
-  m_IndirectSpecularColor: {r: 0.21337931, g: 0.24633822, b: 0.39550775, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1065,6 +1064,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ButtonToPress: {fileID: 120854667}
   m_SwitchContext: 1
+--- !u!114 &79060861 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8881830225923515340, guid: 8cbf41f4a70894743ba4385810062306,
+    type: 3}
+  m_PrefabInstance: {fileID: 1465462816}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &87171861
 GameObject:
   m_ObjectHideFlags: 0
@@ -17614,6 +17625,18 @@ Transform:
   - {fileID: 608416866}
   m_Father: {fileID: 1793296597}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1448750159 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 368156421920259302, guid: 8cbf41f4a70894743ba4385810062306,
+    type: 3}
+  m_PrefabInstance: {fileID: 1465462816}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1465462816
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17641,6 +17664,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.00225
+      objectReference: {fileID: 0}
+    - target: {fileID: 2098332197190484846, guid: 8cbf41f4a70894743ba4385810062306,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2364437252294019155, guid: 8cbf41f4a70894743ba4385810062306,
         type: 3}
@@ -17711,6 +17739,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4359834127774464164, guid: 8cbf41f4a70894743ba4385810062306,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.098
       objectReference: {fileID: 0}
     - target: {fileID: 5037920107205957043, guid: 8cbf41f4a70894743ba4385810062306,
         type: 3}
@@ -19527,6 +19560,8 @@ MonoBehaviour:
   m_AddDefaultGrabTransformers: 1
   animator: {fileID: 1521918394}
   laserRenderer: {fileID: 2015476933}
+  targetName: {fileID: 1448750159}
+  targetPosition: {fileID: 79060861}
 --- !u!95 &1521918394 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 4049066828909488728, guid: 8cbf41f4a70894743ba4385810062306,
@@ -26327,7 +26362,7 @@ MonoBehaviour:
   m_SnapToColliderVolume: 1
   m_ReinitializeDynamicAttachEverySingleGrab: 1
   m_AttachEaseInTime: 0.15
-  m_MovementType: 2
+  m_MovementType: 1
   m_VelocityDamping: 1
   m_VelocityScale: 1
   m_AngularVelocityDamping: 1
@@ -26369,8 +26404,10 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
-  animator: {fileID: 1521918394}
-  laserRenderer: {fileID: 2015476933}
+  animator: {fileID: 0}
+  laserRenderer: {fileID: 0}
+  targetName: {fileID: 0}
+  targetPosition: {fileID: 0}
 --- !u!54 &2015476931
 Rigidbody:
   m_ObjectHideFlags: 0

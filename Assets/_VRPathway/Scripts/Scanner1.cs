@@ -4,18 +4,28 @@ using System.Drawing.Text;
 using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using TMPro;
+
 
 public class Scanner1 : XRGrabInteractable
 {
     [Header("Scanner Data")]
     public Animator animator;
     public LineRenderer laserRenderer;
+    public TextMeshProUGUI targetName;
+    public TextMeshProUGUI targetPosition;
     // Start is called before the first frame update
 
+    private void Start()
+    {
+        
+    }
     protected override void Awake()
     {
         base.Awake();
         laserRenderer.gameObject.SetActive(false);
+        targetName.gameObject.SetActive(false);
+        targetPosition.gameObject.SetActive(false);
     }
 
     protected override void OnSelectEntered(SelectEnterEventArgs args)
@@ -36,12 +46,16 @@ public class Scanner1 : XRGrabInteractable
     {
         base.OnActivated(args);
         laserRenderer.gameObject.SetActive(true);
+        targetName.gameObject.SetActive(false);
+        targetPosition.gameObject.SetActive(false);
     }
 
     protected override void OnDeactivated(DeactivateEventArgs args)
     {
         base.OnDeactivated(args);
         laserRenderer.gameObject.SetActive(false);
+        targetName.gameObject.SetActive(false);
+        targetPosition.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
